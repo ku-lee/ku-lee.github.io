@@ -1,0 +1,36 @@
+I"D
+<div class="card categories">
+    <!-- top-category -->
+    <div class="card-header d-flex justify-content-between hide-border-bottom" id="h_Daily">
+      <span>
+      
+        <i class="far fa-folder fa-fw"></i>
+      
+        <a href="/categories/daily/">Daily</a>
+        <!-- content count -->
+        
+        <span class="text-muted small font-weight-light pl-2">
+        
+          1
+          post
+        </span>
+      </span>
+
+      <!-- arrow -->
+      <a href="#l_Daily" data-toggle="collapse" aria-expanded="true" class="category-trigger hide-border-bottom">
+        
+        <i class="fas fa-fw fa-angle-right disabled"></i>
+        
+      </a>
+
+    </div> <!-- .card-header -->
+
+    <!-- Sub-categories -->
+    
+
+  </div>
+<p><!-- .card --></p>
+
+<script src="/assets/js/dist/category-collapse.min.js" async=""></script>
+
+:ET
