@@ -1,1 +1,1 @@
-[ { "title": "첫 게시글", "url": "/posts/%EC%B2%AB-%EA%B2%8C%EC%8B%9C%EA%B8%80/", "categories": "Daily", "tags": "blog, jekyll, github.io, posting", "date": "2020-03-27 00:00:00 +0900", "snippet": "첫 포스팅 입니다.^~^" }, { "title": "첫 category", "url": "/daily/", "categories": "", "tags": "", "date": "2020-03-27 00:00:00 +0900", "snippet": "" } ]
+[ { "title": "첫 게시글", "url": "/posts/%EC%B2%AB-%EA%B2%8C%EC%8B%9C%EA%B8%80/", "categories": "Daily", "tags": "blog, jekyll, github.io, posting", "date": "2020-03-27 00:00:00 +0900", "snippet": "첫 포스팅 입니다.^~^" } ]
