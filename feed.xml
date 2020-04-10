@@ -1,1 +1,60 @@
-<feed xmlns="http://www.w3.org/2005/Atom"> <id>http://localhost:4000</id><title>Focus</title><subtitle>to be cotinue</subtitle> <updated>2020-04-10T23:57:43+09:00</updated> <author> <name>kulee</name> <uri>http://localhost:4000</uri> </author><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000" rel="alternate" type="text/html" /> <generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator> <rights> © 2020 kulee </rights> <icon>/assets/img/favicons/favicon.ico</icon> <logo>/assets/img/favicons/favicon-96x96.png</logo> <entry><title>첫 게시글</title><link href="http://localhost:4000/posts/%EC%B2%AB-%EA%B2%8C%EC%8B%9C%EA%B8%80/" rel="alternate" type="text/html" title="첫 게시글" /><published>2020-03-27T00:00:00+09:00</published> <updated>2020-04-10T23:57:43+09:00</updated> <id>http://localhost:4000/posts/%EC%B2%AB-%EA%B2%8C%EC%8B%9C%EA%B8%80/</id> <content src="http://localhost:4000/posts/%EC%B2%AB-%EA%B2%8C%EC%8B%9C%EA%B8%80/" /> <author> <name>kulee</name> </author> <category term="Daily" /> <summary>첫 포스팅 입니다. ^~^ </summary> </entry> <entry><title>Text and Typography</title><link href="http://localhost:4000/posts/text-and-typography/" rel="alternate" type="text/html" title="Text and Typography" /><published>2019-08-08T12:33:00+09:00</published> <updated>2020-04-10T23:57:43+09:00</updated> <id>http://localhost:4000/posts/text-and-typography/</id> <content src="http://localhost:4000/posts/text-and-typography/" /> <author> <name>kulee</name> </author> <category term="Blogging" /> <category term="Demo" /> <summary>This Jekyll template totally compatible with Markdown syntax. Now, let’s take a look for the text and typography in this theme. Titles H1 H2 H3 H4 Paragraph I wandered lonely as a cloud ...</summary> </entry> </feed>
+---
+layout: compress
+# Atom Feed, reference: https://validator.w3.org/feed/docs/atom.html
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
+# © 2019 Cotes Chung
+# MIT License
+---
+
+{% capture source %}
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>{{ site.url }}</id>
+  <title>{{ site.title }}</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <author>
+    <name>{{ site.author }}</name>
+    <uri>{{ site.url }}</uri>
+  </author>
+  <link href="/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="{{ site.url }}" rel="alternate" type="text/html" />
+  <generator uri="https://jekyllrb.com/" version="{{ jekyll.version }}">Jekyll</generator>
+  <rights> © {{ 'now' | date: '%Y' }} {{ site.author }} </rights>
+  <icon>{{ site.baseurl }}/assets/img/favicons/favicon.ico</icon>
+  <logo>{{ site.baseurl }}/assets/img/favicons/favicon-96x96.png</logo>
+
+{% for post in site.posts limit: 5 %}
+  {% assign post_absolute_url = site.url | append: post.url %}
+  <entry>
+    <title>{{ post.title }}</title>
+    <link href="{{ post_absolute_url }}" rel="alternate" type="text/html" title="{{ post.title }}" />
+    <published>{{ post.date | date_to_xmlschema }}</published>
+  {% if post.lastmod %}
+    <updated>{{ post.lastmod | date_to_xmlschema }}</updated>
+  {% else %}
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+  {% endif %}
+    <id>{{ post_absolute_url }}</id>
+    <content src="{{ post_absolute_url }}" />
+    <author>
+      <name>{{ site.author }}</name>
+    </author>
+
+  {% if post.categories %}
+    {% for category in post.categories %}
+    <category term="{{ category }}" />
+    {% endfor %}
+  {% endif %}
+
+  {% if post.summary %}
+    <summary>{{ post.summary | strip }}</summary>
+  {% else %}
+    <summary>{{ post.content | strip_html | truncate: 200 }}</summary>
+  {% endif %}
+
+  </entry>
+{% endfor %}
+</feed>
+{% endcapture %}
+{{ source | replace: '&', '&amp;' }}

@@ -1,1 +1,15 @@
-[ { "title": "첫 게시글", "url": "/posts/%EC%B2%AB-%EA%B2%8C%EC%8B%9C%EA%B8%80/", "categories": "Daily", "tags": "blog, jekyll, github.io, posting", "date": "2020-03-27 00:00:00 +0900", "snippet": "첫 포스팅 입니다.^~^" }, { "title": "Text and Typography", "url": "/posts/text-and-typography/", "categories": "Blogging, Demo", "tags": "typography", "date": "2019-08-08 12:33:00 +0900", "snippet": "This Jekyll template totally compatible with Markdown syntax. Now, let’s take a look for the text and typography in this theme.TitlesH1H2H3H4ParagraphI wandered lonely as a cloudThat floats on high o’er vales and hills,When all at once I saw a crowd,A host, of golden daffodils;Beside the lake, be..." } ]
+---
+---
+
+[
+  {% for post in site.posts %}
+  {
+    "title": "{{ post.title | escape }}",
+    "url": "{{ site.baseurl }}{{ post.url }}",
+    "categories": "{{ post.categories | join: ', '}}",
+    "tags": "{{ post.tags | join: ', ' }}",
+    "date": "{{ post.date }}",
+    "snippet": "{{ post.content | strip_html | strip_newlines | remove_chars | escape | truncate: 300 }}"
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
