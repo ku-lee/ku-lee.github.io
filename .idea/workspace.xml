@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f6b2723-5f09-46e1-a166-9265663f7638" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.container" beforeDir="false" afterPath="$PROJECT_DIR$/.container" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.container/.container/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.container/.container/.jekyll-cache/Jekyll/Cache/Jekyll--Cache/b7/9606fb3afea5bd1609ed40b622142f1c98125abcfe89a76a661b0e8e343910" beforeDir="false" afterPath="$PROJECT_DIR$/.container/.container/.jekyll-cache/Jekyll/Cache/Jekyll--Cache/b7/9606fb3afea5bd1609ed40b622142f1c98125abcfe89a76a661b0e8e343910" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.container/.container/_posts/2019-08-08-text-and-typography 복사본.md" beforeDir="false" afterPath="$PROJECT_DIR$/.container/.container/_posts/2019-08-08-text-and-typography 복사본.md" afterDir="false" />
@@ -10,8 +11,6 @@
       <change beforePath="$PROJECT_DIR$/.container/.container/_posts/2019-08-11-customize-the-favicon.md" beforeDir="false" afterPath="$PROJECT_DIR$/.container/.container/_posts/2019-08-11-customize-the-favicon.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.container/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.container/.jekyll-cache/Jekyll/Cache/Jekyll--Cache/b7/9606fb3afea5bd1609ed40b622142f1c98125abcfe89a76a661b0e8e343910" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2020-04-15-first-posting.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-04-15-first-posting.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
