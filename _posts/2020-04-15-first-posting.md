@@ -1,6 +1,6 @@
 ---
 title: "첫 포스팅 입니다"
-date: 2020-04-15 22:18:00 +0800
+date: 2020-04-15
 categories: [Blogging, Tutorial]
 tags: [test]
 toc: false
